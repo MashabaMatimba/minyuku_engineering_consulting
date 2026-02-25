@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minyuku Engineering Consulting | Quality Engineering & Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
+        :root {
+            --blue: 59 130 246;
+            --purple: 139 92 246;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(59 130 246 / 0.25);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(to right, rgb(59 130 246), rgb(139 92 246));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .tech-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-pill:hover {
+            background-color: rgb(139 92 246 / 0.1);
+            transform: scale(1.05);
+        }
+
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            bottom: -8px;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="tail-container bg-slate-950 text-slate-200 overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur-lg border-b border-slate-800 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl logo-font">M</div>
+                <div>
+                    <span class="logo-font text-2xl font-semibold tracking-tighter">Minyuku Engineering Consulting</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                <a href="#expertise" class="nav-link text-slate-300 hover:text-white">Expertise</a>
+                <a href="#stack" class="nav-link text-slate-300 hover:text-white">Stack</a>
+                <a href="#case" class="nav-link text-slate-300 hover:text-white">Case Study</a>
+                <a href="#industries" class="nav-link text-slate-300 hover:text-white">Industries</a>
+                <a href="#certifications" class="nav-link text-slate-300 hover:text-white">Certifications</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="#contact" 
+                   class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-2xl font-semibold text-sm transition-all duration-300 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Get In Touch</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 py-6">
+            <div class="flex flex-col px-6 gap-6 text-lg">
+                <a href="#expertise" class="mobile-link">Expertise</a>
+                <a href="#stack" class="mobile-link">Technology Stack</a>
+                <a href="#case" class="mobile-link">Case Study</a>
+                <a href="#industries" class="mobile-link">Industries</a>
+                <a href="#certifications" class="mobile-link">Certifications</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-3 bg-slate-900/70 border border-slate-700 rounded-3xl px-6 py-2 text-sm">
+                    <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="font-medium text-emerald-400">Available for new engagements • Johannesburg, South Africa</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter logo-font">
+                    Quality Engineering.<br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">Built for confidence.</span>
+                </h1>
+                
+                <p class="text-2xl text-slate-300 max-w-lg">
+                    I help technology teams ship reliable, scalable software faster through modern test automation and CI/CD.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#expertise" 
+                       class="px-8 py-4 bg-white text-slate-950 font-semibold rounded-3xl flex items-center gap-3 hover:scale-105 transition-transform">
+                        <span>Explore My Expertise</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="#contact" 
+                       class="px-8 py-4 border border-slate-400 hover:border-white font-semibold rounded-3xl flex items-center gap-3 transition-all">
+                        Let's Talk
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8 text-sm pt-6">
+                    <div>
+                        <span class="block text-3xl font-semibold text-blue-400">4+</span>
+                        <span class="text-slate-400">Years in QE</span>
+                    </div>
+                    <div class="h-9 w-px bg-slate-700"></div>
+                    <div>
+                        <span class="block text-3xl font-semibold text-purple-400">100%</span>
+                        <span class="text-slate-400">CI/CD Projects</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Visual -->
+            <div class="relative hidden md:block">
+                <div class="absolute -inset-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-[4rem] blur-3xl"></div>
+                <div class="relative bg-slate-900 border border-slate-700 rounded-3xl p-8 shadow-2xl">
+                    <div class="bg-slate-950 rounded-2xl p-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl"></div>
+                                <div>
+                                    <div class="text-sm font-medium">CI Pipeline</div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-slate-400">Last run</div>
+                                <div class="text-emerald-400 text-sm font-medium">2m ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full w-[92%] bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4 text-center text-xs">
+                            <div class="bg-slate-900 p-4 rounded-2xl">
+                                <i class="fa-solid fa-check text-emerald-400 mb-1"></i>
+                                <div class="font-medium">248</div>
+                                <div class="text-slate-400">Automated</div>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-2xl">
+                                <i class="fa-solid fa-clock text-amber-400 mb-1"></i>
+                                <div class="font-medium">30m</div>
+                                <div class="text-slate-400">Avg run</div>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-2xl">
+                                <i class="fa-solid fa-chart-line text-purple-400 mb-1"></i>
+                                <div class="font-medium">98.8%</div>
+                                <div class="text-slate-400">Coverage</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating badges -->
+                <div class="absolute -top-6 -right-6 bg-slate-900 border border-purple-500/30 text-purple-400 text-xs px-5 py-2 rounded-3xl flex items-center gap-2 shadow-xl">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>GitHub Action CI Ready</span>
+                </div>
+                <!-- <div class="absolute -bottom-8 -left-8 bg-slate-900 border border-blue-500/30 text-blue-400 text-xs px-5 py-2 rounded-3xl flex items-center gap-2 shadow-xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Bank-grade stability</span>
+                </div> -->
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs text-slate-400">
+            <span>Scroll to discover</span>
+            <i class="fa-solid fa-chevron-down animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <div class="aspect-square bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl overflow-hidden border border-slate-700 relative">
+                        <img src="Matimba.jpg" 
+                             alt="Matimba Mashaba" 
+                             class="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <div class="text-sm text-purple-300">Matimba Mashaba</div>
+                            <div class="text-2xl font-semibold">Founder &amp; Principal Consultant</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7 space-y-8">
+                    <h2 class="text-5xl font-semibold tracking-tight logo-font">Hi, I'm Matimba.</h2>
+                    <div class="prose prose-invert max-w-none text-lg text-slate-300">
+                        <p class="text-slate-300">
+                            I founded <span class="font-semibold text-white">Minyuku Engineering Consulting</span> to help ambitious tech teams in finance and healthtech eliminate flaky tests and release with confidence.
+                        </p>
+                        <p class="text-slate-300">
+                            With 4 years of hands-on Quality Engineering experience, I specialize in building production-grade automation frameworks that live inside your CI/CD pipeline — not outside it.
+                        </p>
+                    </div>
+                    
+                    <div class="flex gap-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-900/30 text-blue-400 rounded-2xl flex items-center justify-center text-3xl">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Automation Architect</div>
+                                <div class="text-sm text-slate-400">Java • Selenium • Appium</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-purple-900/30 text-purple-400 rounded-2xl flex items-center justify-center text-3xl">
+                                <i class="fa-solid fa-plug"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">CI/CD Engineer</div>
+                                <div class="text-sm text-slate-400">GitLab • GitHub Actions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE EXPERTISE -->
+    <section id="expertise" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-slate-800 text-blue-400 text-sm rounded-3xl font-medium">What I Deliver</span>
+                <h2 class="text-5xl font-semibold tracking-tighter mt-4 logo-font">Core Expertise</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Automation Engineering</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Modular test framework design</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Web &amp; mobile automation (Selenium + Appium)</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Scalable regression suites</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> BDD with Cucumber</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-purple-500/10 text-purple-400 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        <i class="fa-solid fa-infinity"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">CI/CD &amp; Continuous Testing</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> GitLab CI pipeline configuration</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> GitHub Actions workflows</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Automated regression on merge</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Parallel execution &amp; optimisation</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                    <div class="w-14 h-14 bg-cyan-500/10 text-cyan-400 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        <i class="fa-solid fa-chart-bar"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Test Management &amp; Reporting</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Jira + Xray integration</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Automated result publishing</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Full traceability matrix</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Stakeholder dashboards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY STACK -->
+    <section id="stack" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-semibold tracking-tighter logo-font">Technology Stack</h2>
+                <p class="text-slate-400 mt-3">Tools I use every day to deliver production-grade automation</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <i class="fa-brands fa-java text-4xl text-orange-400"></i>
+                    <div>
+                        <div class="font-medium">Java</div>
+                        <div class="text-xs text-slate-400">Core language</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <span class="text-4xl">🧪</span>
+                    <div>
+                        <div class="font-medium">Selenium • Appium</div>
+                        <div class="text-xs text-slate-400">Web &amp; Mobile</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <span class="text-4xl">🥒</span>
+                    <div>
+                        <div class="font-medium">Cucumber BDD</div>
+                        <div class="text-xs text-slate-400">Living documentation</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <i class="fa-solid fa-vial text-4xl text-cyan-400"></i>
+                    <div>
+                        <div class="font-medium">Karate • TestNG</div>
+                        <div class="text-xs text-slate-400">API &amp; Unit</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <i class="fa-solid fa-pipe text-4xl text-orange-500"></i>
+                    <div>
+                        <div class="font-medium">GitLab CI</div>
+                        <div class="text-xs text-slate-400">Primary pipeline</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <i class="fa-brands fa-github text-4xl"></i>
+                    <div>
+                        <div class="font-medium">GitHub Actions</div>
+                        <div class="text-xs text-slate-400">Secondary</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <span class="text-4xl">📋</span>
+                    <div>
+                        <div class="font-medium">Jira + Xray</div>
+                        <div class="text-xs text-slate-400">Test management</div>
+                    </div>
+                </div>
+                <div class="tech-pill bg-slate-800 border border-slate-700 rounded-3xl px-8 py-6 flex items-center gap-4">
+                    <span class="text-4xl">🔄</span>
+                    <div>
+                        <div class="font-medium">BDD • CI/CD</div>
+                        <div class="text-xs text-slate-400">Best practices</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section id="case" class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-slate-900 border border-slate-700 rounded-3xl p-12">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-5/12">
+                        <span class="px-4 py-1 bg-amber-500/10 text-amber-400 text-xs font-medium rounded-full">Featured Project</span>
+                        <h2 class="text-4xl font-semibold mt-6 leading-tight">Automated Regression Pipeline<br>with Jira Integration</h2>
+                        
+                        <div class="mt-10 space-y-8">
+                            <div>
+                                <div class="uppercase text-xs tracking-widest text-slate-400">Problem</div>
+                                <p class="mt-2 text-slate-300">Manual regression cycles took 3+ days and test results were not traceable to requirements.</p>
+                            </div>
+                            <div>
+                                <div class="uppercase text-xs tracking-widest text-slate-400">Solution</div>
+                                <p class="mt-2 text-slate-300">Built a modular Selenium + Java + TestNG framework integrated into CI with full Xray traceability.</p>
+                            </div>
+                            <div>
+                                <div class="uppercase text-xs tracking-widest text-slate-400">Impact</div>
+                                <ul class="mt-3 space-y-2 text-emerald-400">
+                                    <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-trend-down"></i> Regression time reduced by 87%</li>
+                                    <li class="flex items-center gap-3"><i class="fa-solid fa-arrow-trend-up"></i> Release confidence score: 98%</li>
+                                    <li class="flex items-center gap-3"><i class="fa-solid fa-link"></i> 100% traceability achieved</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-7/12 bg-slate-950 rounded-2xl p-8 border border-slate-700">
+                        <div class="font-mono text-xs bg-black p-6 rounded-xl overflow-auto max-h-96 text-emerald-300">
+                            <span class="text-slate-500"># GitLab CI .gitlab-ci.yml snippet</span><br>
+                            regression:<br>
+                              stage: test<br>
+                              image: maven:3.9.6<br>
+                              script:<br>
+                                - mvn test -Dtest=RegressionSuite<br>
+                              artifacts:<br>
+                                when: always<br>
+                                reports:<br>
+                                  junit: target/surefire-reports/TEST-*.xml<br>
+                              tags:<br>
+                                - docker
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries" class="py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-semibold text-center tracking-tighter mb-16 logo-font">Proven in Regulated Industries</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Finance -->
+                <div class="bg-gradient-to-br from-blue-950 to-slate-900 border border-blue-900/50 rounded-3xl p-10">
+                    <div class="text-blue-400 text-5xl mb-6"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3 class="text-3xl font-semibold mb-4">Finance</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> Regulated environment automation</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> High-stability regression strategies</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> Audit-ready traceability</li>
+                    </ul>
+                </div>
+                
+                <!-- Health Tech -->
+                <div class="bg-gradient-to-br from-purple-950 to-slate-900 border border-purple-900/50 rounded-3xl p-10">
+                    <div class="text-purple-400 text-5xl mb-6"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3 class="text-3xl font-semibold mb-4">Health Technology</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> Sensitive data environment testing</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> Reliability-first approaches</li>
+                        <li class="flex gap-3"><span class="text-emerald-400">✓</span> Structured defect management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-semibold tracking-tighter logo-font">Certifications</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 text-center">
+                    <div class="mx-auto w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-400 text-white rounded-2xl flex items-center justify-center text-5xl mb-6">📘</div>
+                    <div class="font-semibold">ISTQB Foundation Level v4.0</div>
+                    <div class="text-slate-400 text-sm mt-1">2025</div>
+                </div>
+                <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 text-center">
+                    <div class="mx-auto w-20 h-20 bg-gradient-to-br from-orange-400 to-red-400 text-white rounded-2xl flex items-center justify-center text-5xl mb-6"><i class="fa-brands fa-gitlab"></i></div>
+                    <div class="font-semibold">GitLab Certified Git Associate</div>
+                    <div class="text-slate-400 text-sm mt-1">2024</div>
+                </div>
+                <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 text-center">
+                    <div class="mx-auto w-20 h-20 bg-gradient-to-br from-purple-400 to-violet-400 text-white rounded-2xl flex items-center justify-center text-5xl mb-6">♾️</div>
+                    <div class="font-semibold">CI/CD with GitLab</div>
+                    <div class="text-slate-400 text-sm mt-1">2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENGAGEMENT MODEL -->
+    <section class="py-24 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-semibold tracking-tighter logo-font mb-6">How We Work Together</h2>
+            <p class="text-xl text-slate-300 mb-12">Flexible engagement models tailored to your needs</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-800 rounded-3xl p-10 text-left">
+                    <div class="text-purple-400 mb-4"><i class="fa-solid fa-handshake text-4xl"></i></div>
+                    <h3 class="text-2xl font-semibold">Contract / Retained QE</h3>
+                    <p class="text-slate-400 mt-3">Dedicated automation engineer embedded in your team (3–12 months).</p>
+                </div>
+                <div class="bg-slate-800 rounded-3xl p-10 text-left">
+                    <div class="text-blue-400 mb-4"><i class="fa-solid fa-wand-magic-sparkles text-4xl"></i></div>
+                    <h3 class="text-2xl font-semibold">Framework Build &amp; Handover</h3>
+                    <p class="text-slate-400 mt-3">I design, implement and train your team on a complete automation solution in 6–10 weeks.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-sm text-slate-400">
+                Short-term consulting, regression modernisation projects, and pipeline health checks also available.
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-semibold tracking-tighter logo-font">Let's build something reliable together</h2>
+                <p class="mt-4 text-slate-400">Drop me a message and I'll get back to you within 24 hours.</p>
+            </div>
+            
+            <form id="contact-form" class="space-y-8 bg-slate-900 border border-slate-700 rounded-3xl p-10">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-2">Your name</label>
+                        <input type="text" id="name" required
+                               class="w-full bg-slate-800 border border-slate-600 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-2">Work email</label>
+                        <input type="email" id="email" required
+                               class="w-full bg-slate-800 border border-slate-600 focus:border-purple-500 rounded-2xl px-6 py-4 outline-none transition-colors">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-2">How can I help you?</label>
+                    <textarea id="message" rows="6" required
+                              class="w-full bg-slate-800 border border-slate-600 focus:border-purple-500 rounded-3xl px-6 py-4 outline-none transition-colors resize-none"></textarea>
+                </div>
+                
+                <button type="submit"
+                        class="w-full py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:brightness-110 font-semibold text-lg rounded-3xl transition-all active:scale-[0.985]">
+                    Send Message →
+                </button>
+                
+                <p class="text-center text-xs text-slate-500">
+                    Or email me directly at <a href="mailto:matimba@minyuku.co.za" class="underline hover:text-white">matimba.mashabaml@gmail.com</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <div class="flex justify-center items-center gap-8 mb-8">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-github text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope text-2xl"></i></a>
+            </div>
+            <p>&copy; 2026 Minyuku Engineering Consulting • Built by Matimba Mashaba</p>
+            <p class="mt-2">Proudly hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+        
+        // Simple contact form handler (demo)
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            
+            alert(`Thank you, ${name}! Your message has been received. I'll reply within 24 hours.`);
+            
+            // Reset form
+            form.reset();
+        });
+        
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Keyboard shortcut hint
+        console.log('%c👋 Welcome to Minyuku Engineering Consulting! Press "/" to focus the contact form.', 'color:#8b5cf6; font-family:monospace');
+    </script>
+</body>
+</html>
